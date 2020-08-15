@@ -1,0 +1,30 @@
+<div class="grid">
+  <div *ngFor="let row of user_grid; index as i_row" class="grid-row">
+    <div *ngFor="let cell of row; index as i_col"
+          class="grid-cell small-cell"
+          [ngClass]="{'active': cell}"
+          (click)="activeCell(i_row, i_col)"
+    >{{grid[i_row][i_col]? 1 : 0}}</div>
+  </div>
+</div>
+
+<div class="number row">
+  <div *ngFor="let col of user_grid[0]; index as i_col" class="number-row">
+    <div *ngFor="let number of getColNumber(i_col)" class="cell small-cell">
+      {{number}}
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+<div class="number col">
+  <div *ngFor="let row of user_grid; index as i_row" class="number-col">
+    <div *ngFor="let number of getRowNumber(i_row)" class="cell small-cell">
+      {{number}}
+    </div>
+  </div>
+</div>
+
+

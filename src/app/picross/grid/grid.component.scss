@@ -1,0 +1,48 @@
+.grid {
+  display: inline-flex;
+}
+
+.grid-row {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.grid-cell {
+  cursor: pointer;
+}
+
+.number {
+  background: cyan;
+  display: inline-flex;
+}
+
+.number.col {
+  flex-direction: row;
+}
+
+.number.row {
+  flex-direction: column;
+}
+
+.number-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-row {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.small-cell {
+  width: 25px;
+  height: 25px;
+  margin: 0.5px;
+  box-shadow: 0 0 0px 1px black;
+  text-align: center;
+}
+
+.active {
+  background: red;
+}
